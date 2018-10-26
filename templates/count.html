@@ -1,0 +1,17 @@
+<title>Word Count</title>
+
+<h3>Your text is: </h3>{{ fulltext }}
+<br/>
+
+<h3>
+<a href="{% url "home" %}">Start Again</a>
+</h3>
+
+<h3>There are {{ count }} words in your text.</h3>
+
+{% for word, total in dictionary %}
+
+{{word}}: {{total}}
+<br/>
+
+{% endfor %} 	
